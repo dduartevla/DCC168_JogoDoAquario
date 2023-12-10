@@ -96,13 +96,19 @@ public class Jogo {
 
     private void iniciarJogo(){
         configuracaAmbiente();
-        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(), Configuracoes.getInstance().getDimY());
-        posicionaPeixesAInicio();
-        posicionaPeixesBInicio();
-        aquario.imprimeAquario();
     }
     
-    public String iniciarJogoT(int dimX, int dimY, int qtdA, int qtdB, int ra, int ma, int rb, int mb){
+    public String auxIniciarJogo(int[] valores){
+    	
+    	int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
+		dimX = valores[0];
+		dimY = valores[1];
+		qtdA = valores[2];
+		qtdB = valores[3];
+		ra = valores[4];
+		ma = valores[5];
+		rb = valores[6];
+		mb = valores[7];
         
     	if (dimX<1 || dimY<1){
     		return "Tamanhao inválido de aquário";
@@ -120,12 +126,34 @@ public class Jogo {
 	        Configuracoes.getInstance().setMa(ma);
 	        Configuracoes.getInstance().setRb(rb);
 	        Configuracoes.getInstance().setMb(mb);
+	        
+	        System.out.println("\n\nO ambiente foi configurado com a seguinte configuração: \n" +
+	                "   - Tamanho do aquário: " + Configuracoes.getInstance().getDimX() + "x" + Configuracoes.getInstance().getDimY()+ "\n" +
+	                "   - Quantidade peixe A: " + Configuracoes.getInstance().getQtdPeixeA() + "\n" +
+	                "   - Quantidade peixe B: " + Configuracoes.getInstance().getQtdPeixeB() + "\n" +
+	                "   - Resistencia peixe A: " + Configuracoes.getInstance().getMa() + "\n" +
+	                "   - Limite reprodução peixe A: " + Configuracoes.getInstance().getRa() + "\n" +
+	                "   - Resistencia peixe B: " + Configuracoes.getInstance().getMb() + "\n" +
+	                "   - Limite reprodução peixe B: " + Configuracoes.getInstance().getRb() + "\n" +
+	                "===============================================================================\n");
+	        
 	        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(), Configuracoes.getInstance().getDimY());
 	        posicionaPeixesAInicio();
 	        posicionaPeixesBInicio();
 	        aquario.imprimeAquario();
 	        return "Ambiente criado com sucesso.";
     	}
+    }
+    
+    private void configuracaAmbiente(){
+        System.out.println(">>>>CONFIGURAÇÃO DO AMBIENTE DO AQUÁRIO<<<<");
+        int valores[] = new int[8];
+        
+        for (int i=0; i<8; i++){
+        	setValor(i,valores);
+        }
+        
+        auxIniciarJogo(valores);
     }
 
     private void posicionaPeixesAInicio(){ // so usado quando inicia ao jogo
@@ -161,34 +189,13 @@ public class Jogo {
             }
         }
     }
-    private void configuracaAmbiente(){
-        System.out.println(">>>>CONFIGURAÇÃO DO AMBIENTE DO AQUÁRIO<<<<");
-        setDimX();
-        setDimY();
-        setQtdPeixeA();
-        setQtdPeixeB();
-        setRa();
-        setMa();
-        setRb();
-        setMb();
+    
 
-        System.out.println("\n\nO ambiente foi configurado com a seguinte configuração: \n" +
-                "   - Tamanho do aquário: " + Configuracoes.getInstance().getDimX() + "x" + Configuracoes.getInstance().getDimY()+ "\n" +
-                "   - Quantidade peixe A: " + Configuracoes.getInstance().getQtdPeixeA() + "\n" +
-                "   - Quantidade peixe B: " + Configuracoes.getInstance().getQtdPeixeB() + "\n" +
-                "   - Resistencia peixe A: " + Configuracoes.getInstance().getMa() + "\n" +
-                "   - Limite reprodução peixe A: " + Configuracoes.getInstance().getRa() + "\n" +
-                "   - Resistencia peixe B: " + Configuracoes.getInstance().getMb() + "\n" +
-                "   - Limite reprodução peixe B: " + Configuracoes.getInstance().getRb() + "\n" +
-                "===============================================================================\n");
-
-    }
-
-    public void setQtdPeixeA(){
+    public void setValor(int i, int vals[]){
         boolean validacao = false;
         int in ;
         while (!validacao) {
-            System.out.println("Informe a quantidade inicial de peixes do tipo A: ");
+            System.out.println("Informe o valor: ");
             try {
                 in = sc.nextInt();
 
@@ -199,143 +206,12 @@ public class Jogo {
             }
             if (in > 0) {
                 validacao = true;
-                Configuracoes.getInstance().setQtdPeixeA(in);
+                vals[i] = in;
             }
         }
     }
 
-    public void setQtdPeixeB(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe a quantidade inicial de peixes do tipo B: ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setQtdPeixeB(in);
-            }
-        }
-    }
-
-    public void setDimX(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe a dimensão \"x\" do aquário: ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setDimX(in);
-            }
-        }
-    }
-
-    public void setDimY(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe a dimensão \"y\" do aquário: ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setDimY(in);
-            }
-        }
-    }
-
-    public void setRa(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe o valor de \"RA\": ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setRa(in);
-            }
-        }
-    }
-
-    public void setMa(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe o valor de \"MA\": ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setMa(in);
-            }
-        }
-    }
-
-    public void setRb(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe o valor de \"RB\": ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setRb(in);
-            }
-        }
-    }
-
-    public void setMb(){
-        boolean validacao = false;
-        int in;
-        while (!validacao) {
-            System.out.println("Informe o valor de \"MB\": ");
-            try {
-                in = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Informe apenas números.");
-                sc.next();
-                in=-1;
-            }
-            if (in > 0) {
-                validacao = true;
-                Configuracoes.getInstance().setMb(in);
-            }
-        }
-    }
+    
 
     public int getRandomNumberUsing(int max) {
         Random random = new Random();

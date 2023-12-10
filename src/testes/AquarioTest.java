@@ -16,7 +16,9 @@ public class AquarioTest {
 	public void ct1(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setDimX();
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);
 		
 		assertEquals(5,Configuracoes.getInstance().getDimX());
 	}
@@ -25,7 +27,9 @@ public class AquarioTest {
 	public void ct2(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setDimY();
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);
 		
 		assertEquals(3,Configuracoes.getInstance().getDimY());
 	}
@@ -34,7 +38,9 @@ public class AquarioTest {
 	public void ct3(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setQtdPeixeA();
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);
 		
 		assertEquals(3,Configuracoes.getInstance().getQtdPeixeA());
 	}
@@ -43,7 +49,9 @@ public class AquarioTest {
 	public void ct4(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setRa();		
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);	
 		assertEquals(5,Configuracoes.getInstance().getRa());
 	}
 	
@@ -51,7 +59,9 @@ public class AquarioTest {
 	public void ct5(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setMa();		
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);		
 		assertEquals(10,Configuracoes.getInstance().getMa());
 	}
 	
@@ -59,7 +69,9 @@ public class AquarioTest {
 	public void ct6(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setRb();		
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);		
 		assertEquals(5,Configuracoes.getInstance().getRb());
 	}
 	
@@ -67,24 +79,19 @@ public class AquarioTest {
 	public void ct7(){
 		Jogo jogo = new Jogo();
 		
-		jogo.setMb();		
+		int[] valores = {5,3,3,3,5,10,5,10};
+		
+		jogo.auxIniciarJogo(valores);		
 		assertEquals(10,Configuracoes.getInstance().getMb());
 	}
+	
 	
 	@Test
 	public void ct8(){
 		Jogo jogo = new Jogo();
-		int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
-		dimX = 5;
-		dimY = 5;
-		qtdA = 10;
-		qtdB = 15;
-		ra = 3;
-		ma = 5;
-		rb = 2;
-		mb = 4;
+		int[] valores = {5,5,10,15,3,5,2,4};		
 		
-		String str = jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+		String str = jogo.auxIniciarJogo(valores);
 			
 		assertEquals("Ambiente criado com sucesso.", str);
 	}
@@ -92,17 +99,9 @@ public class AquarioTest {
 	@Test
 	public void ct9(){
 		Jogo jogo = new Jogo();
-		int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
-		dimX = 0;
-		dimY = 5;
-		qtdA = 3;
-		qtdB = 8;
-		ra = 2;
-		ma = 3;
-		rb = 1;
-		mb = 5;
+		int[] valores = {0,5,3,8,2,3,1,5};		
 		
-		String str = jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+		String str = jogo.auxIniciarJogo(valores);
 			
 		assertEquals("Tamanhao inválido de aquário", str);
 	}
@@ -110,17 +109,19 @@ public class AquarioTest {
 	@Test
 	public void ct10(){
 		Jogo jogo = new Jogo();
-		int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
-		dimX = 4;
-		dimY = 4;
-		qtdA = 20;
-		qtdB = 16;
-		ra = 2;
-		ma = -1;
-		rb = 3;
-		mb = 6;
+		int[] valores = {4,4,20,16,2,-1,3,6};		
 		
-		String str = jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Quantidade de peixes inválida", str);
+	}
+	
+	@Test
+	public void ct11(){
+		Jogo jogo = new Jogo();
+		int[] valores = {4,4,20,16,2,-1,3,6};		
+		
+		String str = jogo.auxIniciarJogo(valores);
 			
 		assertEquals("Quantidade de peixes inválida", str);
 	}

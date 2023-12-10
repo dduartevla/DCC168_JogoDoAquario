@@ -59,3 +59,24 @@
 [INFO ] 10-12-2023 11:23:59 TestsRunner:65 - All tests passed.
 [INFO ] 10-12-2023 11:29:54 TestsRunner:62 - Executed 10 tests in 17983 miliseconds. 0 tests failed.
 [INFO ] 10-12-2023 11:29:54 TestsRunner:65 - All tests passed.
+[INFO ] 10-12-2023 11:47:11 TestsRunner:62 - Executed 4 tests in 14 miliseconds. 0 tests failed.
+[INFO ] 10-12-2023 11:47:11 TestsRunner:65 - All tests passed.
+[INFO ] 10-12-2023 12:18:56 TestsRunner:62 - Executed 11 tests in 19 miliseconds. 8 tests failed.
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct1(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct2(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct3(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct4(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct5(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct6(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct7(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:18:56 TestsRunner:71 - ct11(testes.AquarioTest): expected:<[Tamanhao inválido de aquário]> but was:<[Quantidade de peixes inválida]>
+[INFO ] 10-12-2023 12:20:46 TestsRunner:62 - Executed 11 tests in 16 miliseconds. 7 tests failed.
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct1(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct2(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct3(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct4(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct5(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct6(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:20:46 TestsRunner:71 - ct7(testes.AquarioTest): 7
+[INFO ] 10-12-2023 12:24:02 TestsRunner:62 - Executed 11 tests in 40 miliseconds. 0 tests failed.
+[INFO ] 10-12-2023 12:24:02 TestsRunner:65 - All tests passed.
