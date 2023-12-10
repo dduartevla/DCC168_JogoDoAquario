@@ -10,6 +10,26 @@ import logica.PosicaoAdjacente;
 
 public class AquarioTest {
 	
+	
+	
+	@Test
+	public void ct1(){
+		Jogo jogo = new Jogo();
+		
+		jogo.setDimX();
+		
+		assertEquals(5,Configuracoes.getInstance().getDimX());
+	}
+	
+	@Test
+	public void ct2(){
+		Jogo jogo = new Jogo();
+		
+		jogo.setDimY();
+		
+		assertEquals(5,Configuracoes.getInstance().getDimX());
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
@@ -28,15 +48,6 @@ public class AquarioTest {
 		
 	}
 	*/
-	
-	@Test
-	public void ct1(){
-		Jogo jogo = new Jogo();
-		
-		jogo.setDimX();
-		
-		assertEquals(5,Configuracoes.getInstance().getDimX());
-	}
 	
 	/*
 	@Test
