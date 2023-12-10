@@ -84,3 +84,5 @@
 [INFO ] 10-12-2023 12:30:34 TestsRunner:71 - ct12(testes.AquarioTest): expected:<[Condições do ambiente inválidas.]> but was:<[Quantidade de peixes inválida]>
 [INFO ] 10-12-2023 12:31:25 TestsRunner:62 - Executed 12 tests in 27 miliseconds. 0 tests failed.
 [INFO ] 10-12-2023 12:31:25 TestsRunner:65 - All tests passed.
+[INFO ] 10-12-2023 12:37:26 TestsRunner:62 - Executed 13 tests in 28 miliseconds. 0 tests failed.
+[INFO ] 10-12-2023 12:37:26 TestsRunner:65 - All tests passed.
