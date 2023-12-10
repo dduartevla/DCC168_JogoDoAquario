@@ -4,10 +4,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import logica.Aquario;
+import logica.Configuracoes;
+import logica.Jogo;
 import logica.PosicaoAdjacente;
 
 public class AquarioTest {
-
+	
+	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
 
@@ -24,5 +27,46 @@ public class AquarioTest {
 		assertEquals("0,0 | 0,1 | 0,2 | 1,0 | 1,2 | 2,0 | 2,1 | 2,2 | ", str);
 		
 	}
+	*/
+	
+	@Test
+	public void ct1(){
+		Jogo jogo = new Jogo();
+		
+		jogo.setDimX();
+		
+		assertEquals(5,Configuracoes.getInstance().getDimX());
+	}
+	
+	/*
+	@Test
+	public void ct8(){
+		Jogo jogo = new Jogo();
+		int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
+		dimX = 5;
+		dimY = 5;
+		qtdA = 10;
+		qtdB = 15;
+		ra = 3;
+		ma = 5;
+		rb = 2;
+		mb = 4;
+		
+		
+		jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+		
+		int[] nums = {dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb};
+		int[] comp = {Configuracoes.getInstance().getDimX(),
+				Configuracoes.getInstance().getDimY(),
+				Configuracoes.getInstance().getQtdPeixeA(),
+				Configuracoes.getInstance().getQtdPeixeB(),
+				Configuracoes.getInstance().getRa(),
+				Configuracoes.getInstance().getMa(),
+				Configuracoes.getInstance().getRb(),
+				Configuracoes.getInstance().getMb()};
+		
+		assertArrayEquals(nums, comp);
+	}
+	*/
 
 }

@@ -101,6 +101,23 @@ public class Jogo {
         posicionaPeixesBInicio();
         aquario.imprimeAquario();
     }
+    
+    public void iniciarJogoT(int dimX, int dimY, int qtdA, int qtdB, int ra, int ma, int rb, int mb){
+        Configuracoes.getInstance().setDimX(dimX);
+        Configuracoes.getInstance().setDimY(dimY);
+        Configuracoes.getInstance().setQtdPeixeA(qtdA);
+        Configuracoes.getInstance().setQtdPeixeB(qtdB);
+        Configuracoes.getInstance().setRa(ra);
+        Configuracoes.getInstance().setMa(ma);
+        Configuracoes.getInstance().setRb(rb);
+        Configuracoes.getInstance().setMb(mb);
+        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(), Configuracoes.getInstance().getDimY());
+        posicionaPeixesAInicio();
+        System.out.println("Caralho");
+        posicionaPeixesBInicio();
+        System.out.println("Caralho2");
+        aquario.imprimeAquario();
+    }
 
     private void posicionaPeixesAInicio(){ // so usado quando inicia ao jogo
         for (int i=0; i<Configuracoes.getInstance().getQtdPeixeA(); i++){
@@ -118,9 +135,14 @@ public class Jogo {
         }
     }
     private void posicionaPeixesBInicio(){ // so usado quando inicia o jogo
+    	System.out.println("caralho3");
         for (int i=0; i<Configuracoes.getInstance().getQtdPeixeB(); i++){
+        	System.out.println("caralho4" + i);
             boolean add=false;
-            while (!add) { // não coloca peixe onde já tem peixe
+            int cont = 0;
+            int controle = Configuracoes.getInstance().getDimX() * Configuracoes.getInstance().getDimY();
+            while (!add && cont < controle) { // não coloca peixe onde já tem peixe
+            	System.out.println("caralho4" + i);
                 PeixeB peixe = new PeixeB(Configuracoes.getInstance().getId(),
                         getRandomNumberUsing(Configuracoes.getInstance().getDimX() - 1),
                         getRandomNumberUsing(Configuracoes.getInstance().getDimY() - 1));
@@ -129,6 +151,7 @@ public class Jogo {
                     aquario.addPeixe(peixe);
                     add = true;
                 }
+                cont++;
             }
         }
     }

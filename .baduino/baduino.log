@@ -15,3 +15,25 @@
 [ERROR] 09-12-2023 22:17:58 TestsRunner:50 - Unable to find class file for test org.ufjf.ice.dcc.teste.debora.jogovida.test.AquarioTest
 [INFO ] 09-12-2023 22:20:06 TestsRunner:62 - Executed 1 tests in 3 miliseconds. 0 tests failed.
 [INFO ] 09-12-2023 22:20:06 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:41:12 TestsRunner:62 - Executed 1 tests in 3 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:41:12 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:45:49 TestsRunner:62 - Executed 1 tests in 4 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:45:49 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:46:44 TestsRunner:62 - Executed 1 tests in 4 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:46:44 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:49:39 TestsRunner:62 - Executed 2 tests in 21747 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:49:39 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:52:09 TestsRunner:62 - Executed 1 tests in 4 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:52:09 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:54:44 TestsRunner:62 - Executed 1 tests in 3 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:54:44 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:55:12 TestsRunner:62 - Executed 1 tests in 5 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:55:12 TestsRunner:65 - All tests passed.
+[ERROR] 09-12-2023 22:55:59 TestsRunner:37 - Unable to find class file for testes.ClasseEquivalenciaInvalidaTeste
+[ERROR] 09-12-2023 22:55:59 TestsRunner:37 - Unable to find class file for testes.ClassesEquivalenciaValidasTeste
+[INFO ] 09-12-2023 22:56:15 TestsRunner:62 - Executed 2 tests in 15906 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:56:15 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 23:01:56 TestsRunner:62 - Executed 2 tests in 20840 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 23:01:56 TestsRunner:65 - All tests passed.
+[INFO ] 10-12-2023 00:37:00 TestsRunner:62 - Executed 3 tests in 2735 miliseconds. 0 tests failed.
+[INFO ] 10-12-2023 00:37:00 TestsRunner:65 - All tests passed.
