@@ -27,7 +27,16 @@ public class AquarioTest {
 		
 		jogo.setDimY();
 		
-		assertEquals(5,Configuracoes.getInstance().getDimX());
+		assertEquals(3,Configuracoes.getInstance().getDimY());
+	}
+	
+	@Test
+	public void ct3(){
+		Jogo jogo = new Jogo();
+		
+		jogo.setQtdPeixeA();
+		
+		assertEquals(3,Configuracoes.getInstance().getQtdPeixeA());
 	}
 	
 	/*
