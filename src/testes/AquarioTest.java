@@ -84,20 +84,27 @@ public class AquarioTest {
 		rb = 2;
 		mb = 4;
 		
+		String str = jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+			
+		assertEquals("Ambiente criado com sucesso.", str);
+	}
+	
+	@Test
+	public void ct9(){
+		Jogo jogo = new Jogo();
+		int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
+		dimX = 0;
+		dimY = 5;
+		qtdA = 3;
+		qtdB = 8;
+		ra = 2;
+		ma = 3;
+		rb = 1;
+		mb = 5;
 		
-		jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
-		
-		int[] nums = {dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb};
-		int[] comp = {Configuracoes.getInstance().getDimX(),
-				Configuracoes.getInstance().getDimY(),
-				Configuracoes.getInstance().getQtdPeixeA(),
-				Configuracoes.getInstance().getQtdPeixeB(),
-				Configuracoes.getInstance().getRa(),
-				Configuracoes.getInstance().getMa(),
-				Configuracoes.getInstance().getRb(),
-				Configuracoes.getInstance().getMb()};
-		
-		assertArrayEquals(nums, comp);
+		String str = jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+			
+		assertEquals("Tamanhao inválido de aquário", str);
 	}
 	
 	/*

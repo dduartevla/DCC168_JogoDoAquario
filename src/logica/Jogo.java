@@ -102,21 +102,30 @@ public class Jogo {
         aquario.imprimeAquario();
     }
     
-    public void iniciarJogoT(int dimX, int dimY, int qtdA, int qtdB, int ra, int ma, int rb, int mb){
-        Configuracoes.getInstance().setDimX(dimX);
-        Configuracoes.getInstance().setDimY(dimY);
-        Configuracoes.getInstance().setQtdPeixeA(qtdA);
-        Configuracoes.getInstance().setQtdPeixeB(qtdB);
-        Configuracoes.getInstance().setRa(ra);
-        Configuracoes.getInstance().setMa(ma);
-        Configuracoes.getInstance().setRb(rb);
-        Configuracoes.getInstance().setMb(mb);
-        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(), Configuracoes.getInstance().getDimY());
-        posicionaPeixesAInicio();
-        System.out.println("Caralho");
-        posicionaPeixesBInicio();
-        System.out.println("Caralho2");
-        aquario.imprimeAquario();
+    public String iniciarJogoT(int dimX, int dimY, int qtdA, int qtdB, int ra, int ma, int rb, int mb){
+        
+    	if (dimX<1 || dimY<1){
+    		return "Tamanhao inválido de aquário";
+    	} else if (qtdA<1 || qtdB<1 || qtdA > dimX*dimY || qtdB > dimX*dimY){
+    		return "Quantidade de peixes inválida";
+    	} else if (ra<1 || ma<1 || rb<1 || mb<1){
+    		return "Condições do ambiente inválidas.";
+    	}else{ 
+    	
+	    	Configuracoes.getInstance().setDimX(dimX);
+	        Configuracoes.getInstance().setDimY(dimY);
+	        Configuracoes.getInstance().setQtdPeixeA(qtdA);
+	        Configuracoes.getInstance().setQtdPeixeB(qtdB);
+	        Configuracoes.getInstance().setRa(ra);
+	        Configuracoes.getInstance().setMa(ma);
+	        Configuracoes.getInstance().setRb(rb);
+	        Configuracoes.getInstance().setMb(mb);
+	        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(), Configuracoes.getInstance().getDimY());
+	        posicionaPeixesAInicio();
+	        posicionaPeixesBInicio();
+	        aquario.imprimeAquario();
+	        return "Ambiente criado com sucesso.";
+    	}
     }
 
     private void posicionaPeixesAInicio(){ // so usado quando inicia ao jogo
@@ -135,14 +144,11 @@ public class Jogo {
         }
     }
     private void posicionaPeixesBInicio(){ // so usado quando inicia o jogo
-    	System.out.println("caralho3");
         for (int i=0; i<Configuracoes.getInstance().getQtdPeixeB(); i++){
-        	System.out.println("caralho4" + i);
             boolean add=false;
             int cont = 0;
             int controle = Configuracoes.getInstance().getDimX() * Configuracoes.getInstance().getDimY();
             while (!add && cont < controle) { // não coloca peixe onde já tem peixe
-            	System.out.println("caralho4" + i);
                 PeixeB peixe = new PeixeB(Configuracoes.getInstance().getId(),
                         getRandomNumberUsing(Configuracoes.getInstance().getDimX() - 1),
                         getRandomNumberUsing(Configuracoes.getInstance().getDimY() - 1));
