@@ -1,0 +1,17 @@
+[INFO ] 07-12-2023 22:39:08 TestsRunner:62 - Executed 0 tests in 2 miliseconds. 0 tests failed.
+[INFO ] 07-12-2023 22:39:08 TestsRunner:65 - All tests passed.
+[INFO ] 07-12-2023 22:41:30 TestsRunner:62 - Executed 1 tests in 3 miliseconds. 0 tests failed.
+[INFO ] 07-12-2023 22:41:30 TestsRunner:65 - All tests passed.
+[INFO ] 09-12-2023 22:15:26 TestsRunner:62 - Executed 1 tests in 6 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:15:26 TestsRunner:65 - All tests passed.
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.Aquario
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.Configuracoes
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.Jogo
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.Peixe
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.PeixeA
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.PeixeB
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.logica.PosicaoAdjacente
+[ERROR] 09-12-2023 22:17:58 TestsRunner:37 - Unable to find class file for org.ufjf.ice.dcc.teste.debora.jogovida.TrabalhoDCC168
+[ERROR] 09-12-2023 22:17:58 TestsRunner:50 - Unable to find class file for test org.ufjf.ice.dcc.teste.debora.jogovida.test.AquarioTest
+[INFO ] 09-12-2023 22:20:06 TestsRunner:62 - Executed 1 tests in 3 miliseconds. 0 tests failed.
+[INFO ] 09-12-2023 22:20:06 TestsRunner:65 - All tests passed.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="org.ufjf.ice.dcc.teste.debora.jogovida">
+    <baduino>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino</baduino>
+    <classes>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.Aquario</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.Configuracoes</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.Jogo</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.Peixe</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.PeixeA</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.PeixeB</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.logica.PosicaoAdjacente</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.test.AquarioTest</class>
+        <class>org.ufjf.ice.dcc.teste.debora.jogovida.TrabalhoDCC168</class>
+    </classes>
+    <classes-path>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\bin</classes-path>
+    <coverage-bin>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino\coverage.ser</coverage-bin>
+    <coverage-xml>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino\coverage.xml</coverage-xml>
+    <location>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida</location>
+    <path>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino\org.ufjf.ice.dcc.teste.debora.jogovida.xml</path>
+</model>

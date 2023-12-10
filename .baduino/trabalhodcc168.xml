@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="trabalhodcc168">
+    <baduino>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino</baduino>
+    <classes>
+        <class>logica.Aquario</class>
+        <class>logica.Configuracoes</class>
+        <class>logica.Jogo</class>
+        <class>logica.Peixe</class>
+        <class>logica.PeixeA</class>
+        <class>logica.PeixeB</class>
+        <class>logica.PosicaoAdjacente</class>
+        <class>testes.AquarioTest</class>
+        <class>testes.ClasseEquivalenciaInvalidaTeste</class>
+        <class>testes.ClassesEquivalenciaValidasTeste</class>
+        <class>trabalhodcc168.TrabalhoDCC168</class>
+    </classes>
+    <classes-path>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\bin</classes-path>
+    <coverage-bin>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino\coverage.ser</coverage-bin>
+    <coverage-xml>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino\coverage.xml</coverage-xml>
+    <location>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida</location>
+    <path>C:\Users\izabe\eclipseWorkspace\org.ufjf.ice.dcc.teste.debora.jogovida\.baduino\trabalhodcc168.xml</path>
+</model>
