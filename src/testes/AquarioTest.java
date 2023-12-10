@@ -186,6 +186,56 @@ public class AquarioTest {
 		assertEquals("Quantidade de peixes inválida", str);
 	}
 	
+	@Test
+	public void ct18(){
+		Jogo jogo = new Jogo();
+		int[] valores = {4,4,15,0,2,1,3,6};		
+		
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Quantidade de peixes inválida", str);
+	}
+	
+	@Test
+	public void ct19(){
+		Jogo jogo = new Jogo();
+		int[] valores = {4,4,5,5,0,1,3,6};		
+		
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Condições do ambiente inválidas.", str);
+	}
+	
+	@Test
+	public void ct20(){
+		Jogo jogo = new Jogo();
+		int[] valores = {4,4,5,5,3,0,3,6};		
+		
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Condições do ambiente inválidas.", str);
+	}
+	
+	@Test
+	public void ct21(){
+		Jogo jogo = new Jogo();
+		int[] valores = {4,4,5,5,3,3,0,6};		
+		
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Condições do ambiente inválidas.", str);
+	}
+	
+	@Test
+	public void ct22(){
+		Jogo jogo = new Jogo();
+		int[] valores = {4,4,5,5,3,1,3,0};		
+		
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Condições do ambiente inválidas.", str);
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {

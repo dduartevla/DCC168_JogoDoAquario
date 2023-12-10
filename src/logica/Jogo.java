@@ -159,7 +159,9 @@ public class Jogo {
     private void posicionaPeixesAInicio(){ // so usado quando inicia ao jogo
         for (int i=0; i<Configuracoes.getInstance().getQtdPeixeA(); i++){
             boolean add=false;
-            while (!add) {// não coloca peixe onde já tem peixe
+            int cont = 0;
+            int controle = Configuracoes.getInstance().getDimX() * Configuracoes.getInstance().getDimY();
+            while (!add && cont < controle) {// não coloca peixe onde já tem peixe
                 PeixeA peixe = new PeixeA(Configuracoes.getInstance().getId(),
                         getRandomNumberUsing(Configuracoes.getInstance().getDimX()- 1),
                         getRandomNumberUsing(Configuracoes.getInstance().getDimY() - 1));
@@ -168,6 +170,7 @@ public class Jogo {
                     aquario.addPeixe(peixe);
                     add = true;
                 }
+                cont++;
             }
         }
     }
