@@ -63,6 +63,14 @@ public class AquarioTest {
 		assertEquals(5,Configuracoes.getInstance().getRb());
 	}
 	
+	@Test
+	public void ct7(){
+		Jogo jogo = new Jogo();
+		
+		jogo.setMb();		
+		assertEquals(10,Configuracoes.getInstance().getMb());
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
