@@ -107,6 +107,24 @@ public class AquarioTest {
 		assertEquals("Tamanhao inválido de aquário", str);
 	}
 	
+	@Test
+	public void ct10(){
+		Jogo jogo = new Jogo();
+		int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
+		dimX = 4;
+		dimY = 4;
+		qtdA = 20;
+		qtdB = 16;
+		ra = 2;
+		ma = -1;
+		rb = 3;
+		mb = 6;
+		
+		String str = jogo.iniciarJogoT(dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb);
+			
+		assertEquals("Quantidade de peixes inválida", str);
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
