@@ -126,6 +126,16 @@ public class AquarioTest {
 		assertEquals("Quantidade de peixes inválida", str);
 	}
 	
+	@Test
+	public void ct12(){
+		Jogo jogo = new Jogo();
+		int[] valores = {6,6,15,10,4,2,5,-2};		
+		
+		String str = jogo.auxIniciarJogo(valores);
+			
+		assertEquals("Condições do ambiente inválidas.", str);
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
