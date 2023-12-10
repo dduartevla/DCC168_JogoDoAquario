@@ -47,6 +47,13 @@ public class AquarioTest {
 		assertEquals(5,Configuracoes.getInstance().getRa());
 	}
 	
+	@Test
+	public void ct5(){
+		Jogo jogo = new Jogo();
+		
+		jogo.setMa();		
+		assertEquals(10,Configuracoes.getInstance().getMa());
+	}
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
