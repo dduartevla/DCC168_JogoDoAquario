@@ -253,6 +253,21 @@ public class AquarioTest {
 		assertEquals(23,aquario.getPosicao(0, 0).getId());
 	}
 	
+	@Test
+	public void ct24(){
+		Aquario aquario = new Aquario(3,3);
+		Peixe peixe = new PeixeA(23,1,1);
+		peixe.setMoveuNaRodada(true);
+		
+		aquario.addPeixe(peixe);
+		
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 1);
+		
+		peixe.moverNoAquario(1, 1, aquario, posAoRedor);
+			
+		assertEquals(23,aquario.getPosicao(1, 1).getId());
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
