@@ -268,6 +268,37 @@ public class AquarioTest {
 		assertEquals(23,aquario.getPosicao(1, 1).getId());
 	}
 	
+	@Test
+	public void ct25(){
+		Aquario aquario = new Aquario(3,3);
+		Peixe peixe = new PeixeA(23,1,1);
+		peixe.setMoveuNaRodada(true);
+		
+		aquario.addPeixe(peixe);
+		
+		PosicaoAdjacente[] posAoRedor = new PosicaoAdjacente[0];
+		
+		peixe.moverNoAquario(1, 1, aquario, posAoRedor);
+			
+		assertEquals(23,aquario.getPosicao(1, 1).getId());
+	}
+	
+	@Test
+	public void ct26(){
+		Aquario aquario = new Aquario(3,3);
+		Peixe peixe = new PeixeA(23,1,1);
+		Peixe peixe2 = new PeixeA(26,0,0);
+		
+		aquario.addPeixe(peixe);
+		aquario.addPeixe(peixe2);
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 1);
+		
+		
+		peixe.moverNoAquario(1, 1, aquario, posAoRedor);
+			
+		assertEquals(23,aquario.getPosicao(0, 1).getId());
+	}
+	
 	/*
 	@Test
 	public void deveRetornarPosicoesAoRedor() {
