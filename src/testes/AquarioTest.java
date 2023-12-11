@@ -6,6 +6,8 @@ import org.junit.Test;
 import logica.Aquario;
 import logica.Configuracoes;
 import logica.Jogo;
+import logica.Peixe;
+import logica.PeixeA;
 import logica.PosicaoAdjacente;
 
 public class AquarioTest {
@@ -119,11 +121,11 @@ public class AquarioTest {
 	@Test
 	public void ct11(){
 		Jogo jogo = new Jogo();
-		int[] valores = {4,4,20,16,2,-1,3,6};		
+		int[] valores = {4,-3,20,16,2,-1,3,6};		
 		
 		String str = jogo.auxIniciarJogo(valores);
 			
-		assertEquals("Quantidade de peixes inválida", str);
+		assertEquals("Tamanhao inválido de aquário", str);
 	}
 	
 	@Test
@@ -234,6 +236,21 @@ public class AquarioTest {
 		String str = jogo.auxIniciarJogo(valores);
 			
 		assertEquals("Condições do ambiente inválidas.", str);
+	}
+	
+
+	@Test
+	public void ct23(){
+		Aquario aquario = new Aquario(3,3);
+		Peixe peixe = new PeixeA(23,1,1);
+		
+		aquario.addPeixe(peixe);
+		
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 1);
+		
+		peixe.moverNoAquario(1, 1, aquario, posAoRedor);
+			
+		assertEquals(23,aquario.getPosicao(0, 0).getId());
 	}
 	
 	/*
