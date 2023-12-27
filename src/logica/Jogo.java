@@ -98,8 +98,7 @@ public class Jogo {
         configuracaAmbiente();
     }
     
-    public String auxIniciarJogo(int[] valores){
-    	
+    public String auxIniciarJogo(int[] valores){    	
     	int dimX, dimY, qtdA,  qtdB,  ra,  ma,  rb, mb;
 		dimX = valores[0];
 		dimY = valores[1];
@@ -108,16 +107,14 @@ public class Jogo {
 		ra = valores[4];
 		ma = valores[5];
 		rb = valores[6];
-		mb = valores[7];
-        
+		mb = valores[7];        
     	if (dimX<1 || dimY<1){
     		return "Tamanhao inválido de aquário";
     	} else if (qtdA<1 || qtdB<1 || qtdA > dimX*dimY || qtdB > dimX*dimY){
     		return "Quantidade de peixes inválida";
     	} else if (ra<1 || ma<1 || rb<1 || mb<1){
     		return "Condições do ambiente inválidas.";
-    	}else{ 
-    	
+    	}else{     	
 	    	Configuracoes.getInstance().setDimX(dimX);
 	        Configuracoes.getInstance().setDimY(dimY);
 	        Configuracoes.getInstance().setQtdPeixeA(qtdA);
@@ -128,7 +125,8 @@ public class Jogo {
 	        Configuracoes.getInstance().setMb(mb);
 	        
 	        System.out.println("\n\nO ambiente foi configurado com a seguinte configuração: \n" +
-	                "   - Tamanho do aquário: " + Configuracoes.getInstance().getDimX() + "x" + Configuracoes.getInstance().getDimY()+ "\n" +
+	                "   - Tamanho do aquário: " + Configuracoes.getInstance().getDimX() + "x" +
+	        		Configuracoes.getInstance().getDimY()+ "\n" +
 	                "   - Quantidade peixe A: " + Configuracoes.getInstance().getQtdPeixeA() + "\n" +
 	                "   - Quantidade peixe B: " + Configuracoes.getInstance().getQtdPeixeB() + "\n" +
 	                "   - Resistencia peixe A: " + Configuracoes.getInstance().getMa() + "\n" +
@@ -137,7 +135,8 @@ public class Jogo {
 	                "   - Limite reprodução peixe B: " + Configuracoes.getInstance().getRb() + "\n" +
 	                "===============================================================================\n");
 	        
-	        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(), Configuracoes.getInstance().getDimY());
+	        this.aquario = new Aquario(Configuracoes.getInstance().getDimX(),
+	        		Configuracoes.getInstance().getDimY());
 	        posicionaPeixesAInicio();
 	        posicionaPeixesBInicio();
 	        aquario.imprimeAquario();

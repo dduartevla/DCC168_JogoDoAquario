@@ -53,37 +53,37 @@ public class PeixeB extends Peixe{
         }
     }
 
-    public void reproduzir(Aquario aquario, PosicaoAdjacente[] posAoRedor) {
-
-        //pegando os peixes ao redor
-        Peixe[] peixesAoRedor = aquario.pegaPeixesAoRedor(this.getPosicaoX(), this.getPosicaoY());
-
-        //verificando se tem peixes tipoB ao redor
-        boolean podeReproduzir = true;
-        for (int i=0; i<peixesAoRedor.length; i++){
-            if (peixesAoRedor[i] instanceof PeixeB) {
-                podeReproduzir = false;
-                break;
-            }
-        }
-
-        if (podeReproduzir) {
-            //faz a reprodução do peixe B para a peimeira célula livre disponível
-            for (int i = 0; i < posAoRedor.length; i++) {
-                if (posAoRedor[i] !=null) {
-                    Peixe peixe = aquario.getPosicao(posAoRedor[i].x, posAoRedor[i].y);
-                    if (peixe == null) {
-                        int x = posAoRedor[i].x;
-                        int y = posAoRedor[i].y;
-                        aquario.setPosicao(criaNovoPeixe(x, y), x, y);
-                        this.mb = this.mb +1;
-                        break;
-                    }
-                }
-            }
-        }
-
-    }
+/*1*/    public void reproduzir(Aquario aquario, PosicaoAdjacente[] posAoRedor) {
+/*1*/
+/*1*/        //pegando os peixes ao redor
+/*1*/        Peixe[] peixesAoRedor = aquario.pegaPeixesAoRedor(this.getPosicaoX(), this.getPosicaoY());
+/*1*/
+/*1*/        //verificando se tem peixes tipoB ao redor
+/*1*/        boolean podeReproduzir = true;
+/*1,5*/      for (int i=0; i<peixesAoRedor.length; i++){
+/*2*/            if (peixesAoRedor[i] instanceof PeixeB) {
+/*3*/                podeReproduzir = false;
+/*3*/                break;
+/*4*/            }
+/*5*/        }
+/*5*/
+/*6*/        if (podeReproduzir) {
+/*7*/            //faz a reprodução do peixe B para a peimeira célula livre disponível
+/*7,13*/         for (int i = 0; i < posAoRedor.length; i++) {
+/*8*/                if (posAoRedor[i] !=null) {
+/*9*/                    Peixe peixe = aquario.getPosicao(posAoRedor[i].x, posAoRedor[i].y);
+/*9*/                    if (peixe == null) {
+/*10*/                        int x = posAoRedor[i].x;
+/*10*/                        int y = posAoRedor[i].y;
+/*10*/                        aquario.setPosicao(criaNovoPeixe(x, y), x, y);
+/*10*/                        this.mb = this.mb +1;
+/*10*/                        break;
+/*11*/                    }
+/*12*/                }
+/*13*/            }
+/*14*/        }
+/*14*/
+/*15*/    }
 
     @Override
     public Peixe criaNovoPeixe(int posX, int posY) {

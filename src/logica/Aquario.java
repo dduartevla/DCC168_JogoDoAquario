@@ -55,7 +55,8 @@ public class Aquario {
         }
     }
 
-    public PosicaoAdjacente[] olhaAoRedor(int x, int y){ //retorna posicoes adjacentes válidas onde não é válido fica nulo
+    public PosicaoAdjacente[] olhaAoRedor(int x, int y){ 
+    	//retorna posicoes adjacentes válidas onde não é válido fica nulo
         PosicaoAdjacente[] pa;
         List<PosicaoAdjacente> lPa = new ArrayList<>();
 

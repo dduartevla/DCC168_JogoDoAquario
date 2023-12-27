@@ -13,7 +13,6 @@ import logica.PosicaoAdjacente;
 public class AquarioTest {
 	
 	
-	
 	@Test
 	public void ct1(){
 		Jogo jogo = new Jogo();
@@ -252,7 +251,7 @@ public class AquarioTest {
 			
 		assertEquals(23,aquario.getPosicao(0, 0).getId());
 	}
-	
+
 	@Test
 	public void ct24(){
 		Aquario aquario = new Aquario(3,3);
@@ -299,9 +298,9 @@ public class AquarioTest {
 		assertEquals(23,aquario.getPosicao(0, 1).getId());
 	}
 	
-	/*
+	
 	@Test
-	public void deveRetornarPosicoesAoRedor() {
+	public void ct27() {
 
 		Aquario aquario = new Aquario(3,3);
 		
@@ -316,7 +315,77 @@ public class AquarioTest {
 		assertEquals("0,0 | 0,1 | 0,2 | 1,0 | 1,2 | 2,0 | 2,1 | 2,2 | ", str);
 		
 	}
-	*/
+	
+	@Test
+	public void ct28() {
+
+		Aquario aquario = new Aquario(3,3);
+		
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(0, 0);
+		
+		String str = "";
+		
+		for (int i=0; i< posAoRedor.length; i++){
+			str = str + posAoRedor[i].x + "," + posAoRedor[i].y + " | ";		
+		}
+		
+		assertEquals("0,1 | 1,0 | 1,1 | ", str);
+		
+	}
+	
+	@Test
+	public void ct29() {
+
+		Aquario aquario = new Aquario(3,4);
+		
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 2);
+		
+		String str = "";
+		
+		for (int i=0; i< posAoRedor.length; i++){
+			str = str + posAoRedor[i].x + "," + posAoRedor[i].y + " | ";		
+		}
+		
+		assertEquals("0,1 | 0,2 | 0,3 | 1,1 | 1,3 | 2,1 | 2,2 | 2,3 | ", str);
+		
+	}
+	
+	@Test
+	public void ct30() {
+
+		Aquario aquario = new Aquario(3,4);
+		
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(2, 2);
+		
+		String str = "";
+		
+		for (int i=0; i< posAoRedor.length; i++){
+			str = str + posAoRedor[i].x + "," + posAoRedor[i].y + " | ";		
+		}
+		
+		assertEquals("1,1 | 1,2 | 1,3 | 2,1 | 2,3 | ", str);
+		
+	}
+	
+	@Test
+	public void ct31() {
+
+		Aquario aquario = new Aquario(0,0);
+		
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(0, 0);
+		
+		String str = "";
+		
+		for (int i=0; i< posAoRedor.length; i++){
+			str = str + posAoRedor[i].x + "," + posAoRedor[i].y + " | ";		
+		}
+		
+		assertEquals("", str);
+		
+	}
+	
+	
+	
 	
 	/*
 	
