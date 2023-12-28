@@ -116,3 +116,11 @@
 [INFO ] 27-12-2023 17:20:59 TestsRunner:65 - All tests passed.
 [INFO ] 27-12-2023 17:22:34 TestsRunner:62 - Executed 31 tests in 156 miliseconds. 0 tests failed.
 [INFO ] 27-12-2023 17:22:34 TestsRunner:65 - All tests passed.
+[INFO ] 27-12-2023 23:27:51 TestsRunner:62 - Executed 32 tests in 443 miliseconds. 0 tests failed.
+[INFO ] 27-12-2023 23:27:51 TestsRunner:65 - All tests passed.
+[INFO ] 27-12-2023 23:34:40 TestsRunner:62 - Executed 33 tests in 255 miliseconds. 1 tests failed.
+[INFO ] 27-12-2023 23:34:40 TestsRunner:71 - ct33(testes.AquarioTest): expected:<0> but was:<1>
+[INFO ] 27-12-2023 23:35:08 TestsRunner:62 - Executed 33 tests in 277 miliseconds. 1 tests failed.
+[INFO ] 27-12-2023 23:35:08 TestsRunner:71 - ct33(testes.AquarioTest): expected:<0> but was:<1>
+[INFO ] 27-12-2023 23:40:29 TestsRunner:62 - Executed 34 tests in 203 miliseconds. 1 tests failed.
+[INFO ] 27-12-2023 23:40:29 TestsRunner:71 - ct33(testes.AquarioTest): expected:<0> but was:<1>

@@ -8,6 +8,7 @@ import logica.Configuracoes;
 import logica.Jogo;
 import logica.Peixe;
 import logica.PeixeA;
+import logica.PeixeB;
 import logica.PosicaoAdjacente;
 
 public class AquarioTest {
@@ -384,11 +385,45 @@ public class AquarioTest {
 		
 	}
 	
+	@Test
+	public void ct32() {
+		Aquario aquario = new Aquario(3,3);
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 1);
+		Peixe peixe1 = new PeixeB(24,1,1);
+		aquario.addPeixe(peixe1);
+		peixe1.reproduzir(aquario, posAoRedor);
+		assertEquals(0,aquario.getPosicao(0, 0).getId());
+	}
 	
+	@Test
+	public void ct33() {
+		Aquario aquario = new Aquario(3,3);
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 1);
+		Peixe peixe1 = new PeixeB(24,1,1);
+		Peixe peixe2 = new PeixeA(25,0,0);
+		aquario.addPeixe(peixe1);
+		aquario.addPeixe(peixe2);
+		peixe1.reproduzir(aquario, posAoRedor);
+		assertEquals(0,aquario.getPosicao(0, 1).getId());
+	}
 	
+	@Test
+	public void ct34() {
+		Aquario aquario = new Aquario(3,3);
+		PosicaoAdjacente[] posAoRedor = aquario.olhaAoRedor(1, 1);
+		Peixe peixe1 = new PeixeB(24,0,0);
+		Peixe peixe2 = new PeixeB(25,0,1);
+		aquario.addPeixe(peixe1);
+		aquario.addPeixe(peixe2);
+		peixe1.reproduzir(aquario, posAoRedor);
+		int cont = 0;
+		for(int i=0; i<3; i++){
+			for(int j=0; j<3; j++){
+				if(aquario.getPosicao(i, j) != null)
+					cont++;
+			}
+		}
+		assertEquals(2,cont);
+	}
 	
-	/*
-	
-	*/
-
 }
